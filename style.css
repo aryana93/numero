@@ -1,51 +1,40 @@
 @import url(dark.css);
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
 
-/* @font-face {
-  font-family: "IBM Plex Sans";
-  src: url("IBMPlexSans-Regular.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "IBM Plex Sans";
-  src: url("IBMPlexSans-Bold.ttf") format("truetype");
-  font-weight: bold;
-} */
-
 body {
   font-family: 'Noto Sans', sans-serif;
   font-size: 1.5rem;
   background-color: var(--color-canvas-default);
+  color: var(--color-fg-default);
 }
 
 .sentence {
   max-width: 40rem;
   padding: 0.5rem;
   border-radius: 0.5rem;
-  background-color: lightblue;
+  background-color: transparent;
+  color: inherit;
   margin: 0.5rem auto;
   overflow: hidden;
   clear: both;
-  box-shadow: 0 0 12px rgba(0, 0, 0, 0.8);
   min-height: 1.5rem;
+  border: 2px solid var(--color-border-default);
 }
 
 .gematria {
-  color: navy;
+  color: var(--color-prettylights-syntax-string);
 }
 
 .prime {
-  font-weight: bold;
-  color: darkred;
+  color: var(--color-prettylights-syntax-keyword);
 }
 
 .is-prime {
-  color: darkgreen;
+  color: var(--color-prettylights-syntax-string);
 }
 
 .not-prime {
-  font-weight: bold;
-  color: navy;
+  color: var(--color-prettylights-syntax-string);
 }
 
 .which-prime {
@@ -53,8 +42,7 @@ body {
 }
 
 ::placeholder {
-  color: rgba(0, 0, 0, 0.4);
-  font-style: italic;
+  color: var(--color-fg-subtle);
 }
 
 .wrapper {
@@ -63,14 +51,13 @@ body {
 }
 
 .gematria-input {
-  border: none;
+  border: 2px solid var(--color-border-default);
+  background: transparent;
+  color: inherit;
   font: inherit;
-  color: black;
   padding: 0.5rem;
   font-size: 1.25rem;
   margin: 0.5rem 0.5rem 0.5rem 0;
-  background-color: lightblue;
-  box-shadow: 0 0 12px rgba(0, 0, 0, 0.8);
   border-radius: 0.5rem;
   float: left;
   min-width: 24rem;
@@ -78,16 +65,15 @@ body {
 }
 
 .gematria-clear-button {
-  box-shadow: 0 0 12px rgba(0, 0, 0, 0.8);
-  color: white;
   display: inline-flex;
-  background-color: lightblue;
   justify-content: center;
-  border: none;
   border-radius: 0.5rem;
   padding: 0.5rem;
   margin: 0.5rem 0 0.5rem 0.5rem;
   float: left;
+  background: transparent;
+  color: var(--color-fg-default);
+  border: 2px solid var(--color-border-default);
 }
 
 .gematria-clear-button:hover {
@@ -95,24 +81,19 @@ body {
 }
 
 .gematria-output {
-  box-shadow: 0 0 12px rgba(0, 0, 0, 0.8);
-  background-color: lightblue;
-  border-radius: 0.5rem;
-  border: none;
   padding: 0.5rem;
   margin: 0.5rem auto;
-  /* border: 2px solid white; */
+  border-radius: 0.5rem;
+  border: 2px solid var(--color-border-default);
 }
 
 td {
   padding: 0.5rem;
-  /* border-bottom: 1px solid white; */
-  font-weight: bold;
   vertical-align: middle;
 }
 
 tr:nth-child(even) {
-  background-color: skyblue;
+  background-color: var(--color-canvas-overlay);
 }
 
 table {
